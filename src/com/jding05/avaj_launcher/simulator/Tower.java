@@ -15,7 +15,7 @@ public class Tower {
     }
 
     public void unregister(Flyable flyable) {
-        if (!observers.contains(flayable)) {
+        if (!observers.contains(flyable)) {
             return ;
         }
         observers.remove(flyable);
@@ -23,7 +23,7 @@ public class Tower {
 
     protected void conditionsChanged() {
         for (int i = 0; i < observers.size(); i++) {
-            observers.get(i).updateConditons();
+            observers.get(i).updateConditions();
         }
     }
 }

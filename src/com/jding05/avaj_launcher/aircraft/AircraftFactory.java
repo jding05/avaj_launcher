@@ -1,7 +1,7 @@
 package com.jding05.avaj_launcher.aircraft;
 
 public class AircraftFactory {
-    public Flyable newAircraft(String type, String name, int longitude, int latitude, int height) {
+    public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height) {
         Coordinates coordinates = new Coordinates(longitude, latitude, height);
 
         if (type.toLowerCase().equals("baloon")) {

@@ -22,4 +22,21 @@ public class Coordinates {
     public int getHeight() {
         return height;
     }
+
+    public void setLongitude(int longitudeDiff) {
+        this.longitude += longitudeDiff;
+    }
+
+    public void setLatitude(int latitudeDiff) {
+        this.latitude += latitudeDiff;
+    }
+
+    public void setHeight(int heightDiff) {
+        this.height += heightDiff;
+        if (this.height > 100) {
+            this.height = 100;
+        } else if (this.height < 0) {
+            this.height = 0;
+        }
+    }
 }
