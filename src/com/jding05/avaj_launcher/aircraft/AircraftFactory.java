@@ -6,8 +6,8 @@ public class AircraftFactory {
 
         if (type.toLowerCase().equals("baloon")) {
             return new Baloon(name, coordinates);
-        } else if (type.toLowerCase().equals("helcopter")) {
-            return new Helcopter(name, coordinates);
+        } else if (type.toLowerCase().equals("helicopter")) {
+            return new Helicopter(name, coordinates);
         } else if (type.toLowerCase().equals("jetplane")) {
             return new JetPlane(name, coordinates);
         } else {

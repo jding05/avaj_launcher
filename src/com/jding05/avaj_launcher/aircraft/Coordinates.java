@@ -23,16 +23,16 @@ public class Coordinates {
         return height;
     }
 
-    public void setLongitude(int longitudeDiff) {
-        this.longitude += longitudeDiff;
+    public void setLongitude(int longitude) {
+        this.longitude = longitude;
     }
 
-    public void setLatitude(int latitudeDiff) {
-        this.latitude += latitudeDiff;
+    public void setLatitude(int latitude) {
+        this.latitude = latitude;
     }
 
-    public void setHeight(int heightDiff) {
-        this.height += heightDiff;
+    public void setHeight(int height) {
+        this.height = height;
         if (this.height > 100) {
             this.height = 100;
         } else if (this.height < 0) {

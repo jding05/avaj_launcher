@@ -7,7 +7,7 @@ public class Logger {
     private static PrintWriter writer = null;
     private static final String fileName = "simulate.txt";
 
-    public PrintWriter getFile() {
+    private static PrintWriter getFile() {
         try {
             if (writer == null) {
                 writer = new PrintWriter(fileName);
@@ -20,10 +20,10 @@ public class Logger {
     }
 
     public static void log(String message) {
-        Logger.writer.println(message);
+        getFile().println(message);
     }
 
-    public static void close() {
+     static void close() {
         if (writer != null) {
             writer.close();
         }
